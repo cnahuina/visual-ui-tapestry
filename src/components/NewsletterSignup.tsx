@@ -35,9 +35,9 @@ const NewsletterSignup: React.FC = () => {
   };
 
   return (
-    <div className="bg-transparent w-full">
+    <div className="bg-transparent w-full md:items-center">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div className="md:max-w-md">
+        <div className="w-full">
           <h3 className="text-[rgba(3,24,57,1)] text-2xl font-bold mb-2">
             Suscríbete a nuestro boletín
           </h3>
@@ -51,14 +51,14 @@ const NewsletterSignup: React.FC = () => {
             ¡Gracias por suscribirte a nuestro boletín!
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:min-w-[340px] w-full">
-            <div className="flex-grow">
+          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 w-full md:justify-end">
+            <div className="md:min-w-[540px]">
               <Input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Tu correo electrónico"
-                className="h-9 text-sm"
+                className="px-3 py-2 text-sm"
               />
               {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
             </div>
@@ -66,7 +66,7 @@ const NewsletterSignup: React.FC = () => {
             <ButtonCustom
               type="submit"
               variant="primary"
-              className="whitespace-nowrap text-base px-6 py-2 h-9"
+              className="whitespace-nowrap text-base px-6 py-2"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Procesando..." : "Suscribirme"}
