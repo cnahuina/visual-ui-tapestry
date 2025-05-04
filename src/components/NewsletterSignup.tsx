@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import { ButtonCustom } from "./ui/button-custom";
+import { Input } from "./ui/input";
 
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -50,14 +51,14 @@ const NewsletterSignup: React.FC = () => {
             ¡Gracias por suscribirte a nuestro boletín!
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:min-w-[400px] w-full">
+          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:min-w-[340px] w-full">
             <div className="flex-grow">
-              <input
+              <Input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Tu correo electrónico"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgba(0,194,177,1)] focus:border-transparent"
+                className="h-9 text-sm"
               />
               {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
             </div>
@@ -65,7 +66,7 @@ const NewsletterSignup: React.FC = () => {
             <ButtonCustom
               type="submit"
               variant="primary"
-              className="whitespace-nowrap"
+              className="whitespace-nowrap text-base px-6 py-2 h-9"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Procesando..." : "Suscribirme"}
