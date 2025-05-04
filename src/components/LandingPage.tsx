@@ -27,14 +27,9 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
         
-        {/* Newsletter Section */}
+        {/* Newsletter Section - No title, full width */}
         <div className="bg-[rgba(239,244,252,1)] py-16 px-24 max-md:px-5">
-          <h2 className="text-[rgba(3,24,57,1)] text-[40px] font-bold leading-[1.4] text-center mb-12">
-            Mantente informado
-          </h2>
-          <div className="flex justify-center">
-            <NewsletterSignup />
-          </div>
+          <NewsletterSignup />
         </div>
       </main>
       <Footer />

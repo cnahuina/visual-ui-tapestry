@@ -34,7 +34,7 @@ const NewsletterSignup: React.FC = () => {
   };
 
   return (
-    <div className="bg-transparent p-8 rounded-lg max-w-4xl w-full">
+    <div className="bg-transparent w-full">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div className="md:max-w-md">
           <h3 className="text-[rgba(3,24,57,1)] text-2xl font-bold mb-2">
@@ -50,7 +50,7 @@ const NewsletterSignup: React.FC = () => {
             ¡Gracias por suscribirte a nuestro boletín!
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:min-w-[400px]">
+          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:min-w-[400px] w-full">
             <div className="flex-grow">
               <input
                 type="email"
