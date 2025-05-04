@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Features from "./Features";
 import About from "./About";
-import ContactForm from "./ContactForm";
 import NewsletterSignup from "./NewsletterSignup";
 import Footer from "./Footer";
 
