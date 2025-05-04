@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { ButtonCustom } from "./ui/button-custom";
 
@@ -33,28 +34,27 @@ const NewsletterSignup: React.FC = () => {
   };
 
   return (
-    <div className="bg-[rgba(239,244,252,1)] p-6 rounded-lg max-w-md mx-auto mt-8">
-      <h3 className="text-[rgba(3,24,57,1)] text-xl font-bold mb-2">
-        Mantente informado
+    <div className="bg-white p-8 rounded-lg max-w-md shadow-md w-full">
+      <h3 className="text-[rgba(3,24,57,1)] text-2xl font-bold mb-4">
+        Suscríbete a nuestro boletín
       </h3>
-      <p className="text-[rgba(30,30,30,1)] text-sm mb-4">
-        Suscríbete a nuestro boletín para recibir las últimas noticias y
-        actualizaciones.
+      <p className="text-[rgba(30,30,30,1)] text-base mb-6">
+        Recibe las últimas noticias, actualizaciones y ofertas directamente en tu bandeja de entrada.
       </p>
 
       {submitSuccess ? (
-        <div className="bg-green-100 text-green-700 p-3 rounded-md">
+        <div className="bg-green-100 text-green-700 p-4 rounded-md">
           ¡Gracias por suscribirte a nuestro boletín!
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3">
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
           <div>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Tu correo electrónico"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgba(0,194,177,1)] focus:border-transparent"
+              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[rgba(0,194,177,1)] focus:border-transparent"
             />
             {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
           </div>
